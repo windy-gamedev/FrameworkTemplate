@@ -11,17 +11,36 @@ It provides a **modular architecture**, standardized **service layer**, and **ut
 ---
 
 ## 📁 Folder Structure
-__RSUnityFramework__/
-├─ Common/ → Base types, extensions, and helper utilities
-├─ Core/ → Service Locator, BaseManager, Dependency Injection (optional)
-├─ Editor/ → Custom editor tools, inspectors, and menu utilities
-├─ Managers/ → Central managers (GameManager, UIManager, SceneManager)
-├─ Services/ → Global services (Audio, Save, Analytics, RemoteConfig, Localization)
-├─ UI/ → Base UI logic and reusable components
-├─ Utilities/ → Generic tools (Math, Event, Coroutine, Tween, FileIO)
-├─ Plugins/ → Third-party dependencies (DOTween, Odin, Firebase, etc.)
 
----
+RSUnityFramework/
+│
+├── 📂 Common/
+│   └─ Base types, extensions, and helper utilities
+│
+├── 📂 Core/
+│   └─ Service Locator, BaseManager, Dependency Injection (optional)
+│
+├── 📂 Editor/
+│   └─ Custom editor tools, inspectors, and menu utilities
+│
+├── 📂 Managers/
+│   └─ Central managers (GameManager, UIManager, SceneManager)
+│
+├── 📂 Services/
+│   └─ Global services (Audio, Save, Analytics, RemoteConfig, Localization)
+│
+├── 📂 UI/
+│   └─ Base UI logic and reusable UI components
+│
+├── 📂 Utilities/
+│   └─ Generic tools (Math, Event, Coroutine, Tween, FileIO)
+│
+├── 📂 Plugins/
+│   └─ Third-party dependencies (DOTween, Odin, Firebase, etc.)
+│
+└── 📂 Tests/
+    └─ Unit tests and play mode tests
+
 
 ## ⚙️ Module Details
 
@@ -76,6 +95,17 @@ Independent systems that manage cross-game data or logic:
 
 ---
 
+### 📦 **Plugins/**
+Third-party libraries and SDKs integrated into the project:
+- `DOTween/` – Tweening engine.
+- `OdinInspector/` – Editor enhancements.
+- `Firebase/`, `GameAnalytics/`, etc.
+
+> 🧭 Keep third-party code isolated.  
+> Wrap their APIs in Services or Utilities for maintainability.
+
+---
+
 ### 🖼️ **UI/**
 Base UI components and view logic.
 - `UIBase` – Base for all UI screens.
@@ -96,23 +126,6 @@ General-purpose reusable utilities:
 - `FileIO/` – File read/write, JSON, and serialization tools.
 
 > Should be lightweight and game-independent.
-
----
-
-### 📦 **Plugins/**
-Third-party libraries and SDKs integrated into the project:
-- `DOTween/` – Tweening engine.
-- `OdinInspector/` – Editor enhancements.
-- `Firebase/`, `GameAnalytics/`, etc.
-
-> 🧭 Keep third-party code isolated.  
-> Wrap their APIs in Services or Utilities for maintainability.
-
----
-
-### 🧪 **Tests/**
-Unit Tests and Play Mode Tests.  
-Used to validate framework logic and ensure backward compatibility.
 
 ---
 
@@ -153,7 +166,7 @@ Used to validate framework logic and ensure backward compatibility.
 ## 🏷️ Notes
 - `__RSUnityFramework__` should remain **independent of game-specific content**.  
 - Designed to be imported or version-controlled as a shared module.  
-- Ensure compatibility with Unity **2022.3+ (LTS)** or higher.
+- Ensure compatibility with Unity **6000.0.60f1 (LTS)** or higher.
 
 ---
 
